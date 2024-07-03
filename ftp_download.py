@@ -13,7 +13,7 @@ def download_file_from_ftp(file_name):
     ftp.sendcmd('TYPE I')  # Switch to binary mode
 
     remote_file_path = f"/raw_data/{file_name}"
-    local_file_path = f"D:/labwork/new_download_image/{file_name}"
+    local_file_path = f"D:\worker\Worker_2022\Worker-AI-HYLAB\download\{file_name}"
 
     try:
         file_size = ftp.size(remote_file_path)
