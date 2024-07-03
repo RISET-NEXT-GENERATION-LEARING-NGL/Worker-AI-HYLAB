@@ -10,7 +10,8 @@ from utils import DbConnection
 
 def recognition(local_file_path, file_name):
     report, log = DbConnection()
-    image_directory = "D:\worker\Worker_2022\Worker-AI-HYLAB\model\face_model"
+    # image_directory = "D:/labwork/face_model"
+    image_directory = "D:\\worker\\Worker_2022\\Worker-AI-HYLAB\\model\"
     known_face_encodings = []
     known_face_names = []
 
@@ -43,7 +44,7 @@ def recognition(local_file_path, file_name):
                 fdt2 = dt.strftime("%d-%m-%Y %H:%M:%S")
                 print("Face detected:", name, "time:", fdt2)
 
-                face_model_path = Path(f"D:/labwork/face_model/{name}")
+                face_model_path = Path(f"D:\\worker\\Worker_2022\\Worker-AI-HYLAB\\model\\{name}")
                 face_model_path.mkdir(parents=True, exist_ok=True)
 
                 pil_image.save(face_model_path / f"{file_name}.jpg")
