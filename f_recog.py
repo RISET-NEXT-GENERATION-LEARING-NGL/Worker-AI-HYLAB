@@ -10,7 +10,7 @@ from utils import DbConnection
 
 def recognition(local_file_path, file_name):
     report, log = DbConnection()
-    image_directory = "D:/labwork/face_model"
+    image_directory = "D:\worker\Worker_2022\Worker-AI-HYLAB\model\face_model"
     known_face_encodings = []
     known_face_names = []
 
